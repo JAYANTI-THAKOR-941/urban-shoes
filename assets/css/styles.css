@@ -1,0 +1,454 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(to right, #444, #111);
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.header .logo a:hover {
+    color: #f04e31;
+}
+
+.header .nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.header .nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.header .nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header .nav-menu ul li a:hover {
+    background-color: #f04e31;
+    color: #fff;
+}
+
+.header .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bars input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-bars input:focus {
+    box-shadow: 0 0 5px rgba(240, 78, 49, 0.8);
+}
+
+.search-bars button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #f04e31;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bars button:hover {
+    background-color: #ff623d;
+}
+
+.cart-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.cart-icon span {
+    background-color: #f04e31;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    font-weight: bold; 
+}
+
+
+.btn-login {
+    text-decoration: none;
+    padding: 8px 20px;
+    background-color: #f04e31;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #ff623d;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Footer Styles */
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer .social-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links li a:hover {
+    color: #f04e31;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+/* auth form style */
+.auth-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 360px;
+    margin: 10% auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.auth-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f04e31;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ff623d;
+}
+
+.auth-section p {
+    text-align: center;
+}
+
+.auth-section a {
+    color: #f04e31;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .auth-section {
+        padding: 15px;
+    }
+
+    .input-group input {
+        padding: 8px;
+    }
+
+    .btn {
+        padding: 12px;
+    }
+}
+
+
+/* About Us Header Image Section */
+.about-header {
+    background: linear-gradient(to bottom right, rgba(27, 19, 18, 0.7), rgba(51, 51, 51, 0.7)), url('https://static.vecteezy.com/system/resources/thumbnails/011/568/371/small_2x/creative-flatlay-of-education-orange-table-with-student-books-shoes-colorful-pencil-eye-glasses-empty-space-in-studio-shot-isolated-on-orange-long-banner-background-concept-of-education-photo.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.about-header-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.about-header-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* About Us Main Content */
+.about-us {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.about-us ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-us ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.about-us ul li strong {
+    color: #333;
+}
+
+
+
+/* Contact Us Section */
+.contact-us {
+    padding: 60px 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-info h2 {
+    color: #f04e31;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.contact-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+.contact-form {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-form h2 {
+    color: #f04e31;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #555;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #5C6BC0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #f04e31;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #3f51b5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
