@@ -8,7 +8,12 @@ require('razorpay-php/Razorpay.php');
 use Razorpay\Api\Api;
 
 // Your Razorpay Key Secret
-$keySecret = 'hTSHYNC8Cm084lPqg9AdejH7';
+$keyId = getenv('RAZORPAY_KEY_ID');
+$keySecret = getenv('RAZORPAY_KEY_SECRET');
+if (!$keyId || !$keySecret) {
+    http_response_code(503);
+    exit('Payment service unavailable');
+}
 
 // Retrieve payment details sent via AJAX
 $paymentId = $_POST['payment_id'];
@@ -16,7 +21,7 @@ $orderId = $_POST['order_id'];
 $signature = $_POST['signature'];
 
 // Initialize Razorpay API
-$api = new Api('rzp_test_MCCHlSWeh3mRj4', $keySecret);
+$api = new Api($keyId, $keySecret);
 
 // Verify payment signature
 $attributes = array(
@@ -33,6 +38,6 @@ try {
     echo 'Payment verification successful!';
 } catch (\Exception $e) {
     // Handle failure (e.g., payment not verified)
-    echo 'Payment verification failed: ' . $e->getMessage();
+    echo 'Payment verification failed';
 }
 ?>
