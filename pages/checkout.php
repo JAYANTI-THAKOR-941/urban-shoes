@@ -25,8 +25,8 @@ foreach ($_SESSION['cart'] as $product) {
     }
 }
 
-$keyId = 'rzp_test_MCCHlSWeh3mRj4';
-$keySecret = 'hTSHYNC8Cm084lPqg9AdejH7';
+$keyId = getenv('RAZORPAY_KEY_ID') ?: '';
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['name'], $_POST['email'], $_POST['contact'], $_POST['address'], $_POST['payment-method'])) {
@@ -284,7 +284,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             const paymentMethod = document.getElementById('payment-method').value;
             if (paymentMethod === 'online') {
                 const options = {
-                    key: "<?= $keyId; ?>",
+                    key: <?= json_encode($keyId, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>,
                     amount: "<?= $cartTotal * 100; ?>",
                     currency: "INR",
                     name: "Urban Shoes",
