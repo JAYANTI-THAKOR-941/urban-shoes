@@ -1,0 +1,7 @@
+
+
+# Local credentials
+/API_Key.txt
+.env
+.env.*
+!.env.example
