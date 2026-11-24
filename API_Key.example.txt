@@ -1,0 +1,4 @@
+API key: YOUR_API_KEY
+API secret: YOUR_API_SECRET
+
+Use local or deployment environment configuration. Never commit real credentials.
